@@ -23,4 +23,3 @@ scene.addEventListener('enter-vr',()=>{$('vrPanel').setAttribute('visible',true)
 scene.addEventListener('exit-vr',()=>{$('vrPanel').setAttribute('visible',false);});
 setInterval(()=>{if(!myId||!ws||ws.readyState!==1)return;const rig=$('rig').object3D,camera=$('camera').object3D;const pos=new THREE.Vector3();camera.getWorldPosition(pos);const rot=new THREE.Euler().setFromQuaternion(camera.getWorldQuaternion(new THREE.Quaternion()),'YXZ');send({type:'pose',x:pos.x,z:pos.z,rot:THREE.MathUtils.radToDeg(rot.y)})},250);
 </script></body></html>
-
