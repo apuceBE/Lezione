@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Aula B01 · v0.9 · Meta Quest 3</title><script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script><style>body{margin:0;font:14px system-ui}#ui{position:fixed;top:12px;left:12px;z-index:10;width:min(350px,calc(100vw - 40px));background:linear-gradient(145deg,#102b4cf5,#172b45f5);color:#fff;padding:16px;border:1px solid #6089b5;border-radius:18px;box-shadow:0 8px 30px #0005}h2{font-size:17px;margin:0 0 8px}p{margin:8px 0}input{padding:11px;border-radius:8px;border:1px solid #8ca4bd;background:#f8fbff;width:calc(100% - 24px);margin:4px 0;color:#10233a}button{padding:10px 12px;border:0;border-radius:9px;background:#4fbfff;color:#092b48;font-weight:700;margin:4px 3px 4px 0}button:disabled{opacity:.4}#controls{display:none}#status{font-size:12px;color:#c8e5f7}small{color:#c9dbe8}#counter{font-weight:bold}</style></head><body><div id="ui"><h2>🎓 Aula immersiva · B01</h2><div id="login"><p>Entra nella stessa aula con altri docenti (max 20).</p><input id="name" maxlength="28" placeholder="Il tuo nome"/><input id="code" maxlength="12" placeholder="Codice aula (es. CORSO3)" value="CORSO3"/><button id="join">Entra nell'aula</button></div><div id="controls"><p><span id="counter">1/20</span> · <span id="role"></span> · Aula <b id="roomcode"></b></p><p id="slideName"></p><p aria-live="polite" id="slidePosition"></p><button id="prev">◀ Precedente</button><button id="play">▶ Avvia voce</button><button id="next">Successivo ▶</button><button id="audioUnlock">🔊 Attiva audio</button><button id="stop">■ Ferma</button><button id="retryAudio">↻ Riprova audio</button><button id="exitRoom" style="background:#ffbcaa">⏻ Esci dall’aula</button><p aria-live="polite" id="audioInfo"><small>Audio: non avviato</small></p><p><small>In VR: usa il raggio del controller e il grilletto sui pulsanti davanti a te. Le tre slide utilizzano i file MP3 preregistrati presenti nella cartella audio.</small></p></div><div id="localTools" style="display:none;border-top:1px solid #567086;padding-top:9px;margin-top:8px"><label for="localVolume">🔉 Volume locale</label> <input id="localVolume" max="100" min="0" style="width:130px;vertical-align:middle" type="range" value="100"/><span id="volumeValue">100%</span><p><label for="audioProgress">Avanzamento spiegazione</label> <progress id="audioProgress" max="100" style="width:100%" value="0"></progress><small id="audioClock">0:00 / 0:00</small></p><p><small>Il volume è personale: non modifica quello degli altri partecipanti.</small></p></div><p id="status">Pronto. Per entrare in VR è necessario HTTPS e un browser compatibile WebXR.</p></div>
+<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Aula B01 · v0.10 · Avatar frontale</title><script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script><style>body{margin:0;font:14px system-ui}#ui{position:fixed;top:12px;left:12px;z-index:10;width:min(350px,calc(100vw - 40px));background:linear-gradient(145deg,#102b4cf5,#172b45f5);color:#fff;padding:16px;border:1px solid #6089b5;border-radius:18px;box-shadow:0 8px 30px #0005}h2{font-size:17px;margin:0 0 8px}p{margin:8px 0}input{padding:11px;border-radius:8px;border:1px solid #8ca4bd;background:#f8fbff;width:calc(100% - 24px);margin:4px 0;color:#10233a}button{padding:10px 12px;border:0;border-radius:9px;background:#4fbfff;color:#092b48;font-weight:700;margin:4px 3px 4px 0}button:disabled{opacity:.4}#controls{display:none}#status{font-size:12px;color:#c8e5f7}small{color:#c9dbe8}#counter{font-weight:bold}</style></head><body><div id="ui"><h2>🎓 Aula immersiva · B01</h2><div id="login"><p>Entra nella stessa aula con altri docenti (max 20).</p><input id="name" maxlength="28" placeholder="Il tuo nome"/><input id="code" maxlength="12" placeholder="Codice aula (es. CORSO3)" value="CORSO3"/><button id="join">Entra nell'aula</button></div><div id="controls"><p><span id="counter">1/20</span> · <span id="role"></span> · Aula <b id="roomcode"></b></p><p id="slideName"></p><p aria-live="polite" id="slidePosition"></p><button id="prev">◀ Precedente</button><button id="play">▶ Avvia voce</button><button id="next">Successivo ▶</button><button id="audioUnlock">🔊 Attiva audio</button><button id="stop">■ Ferma</button><button id="retryAudio">↻ Riprova audio</button><button id="exitRoom" style="background:#ffbcaa">⏻ Esci dall’aula</button><p aria-live="polite" id="audioInfo"><small>Audio: non avviato</small></p><p><small>In VR: usa il raggio del controller e il grilletto sui pulsanti davanti a te. Le tre slide utilizzano i file MP3 preregistrati presenti nella cartella audio.</small></p></div><div id="localTools" style="display:none;border-top:1px solid #567086;padding-top:9px;margin-top:8px"><label for="localVolume">🔉 Volume locale</label> <input id="localVolume" max="100" min="0" style="width:130px;vertical-align:middle" type="range" value="100"/><span id="volumeValue">100%</span><p><label for="audioProgress">Avanzamento spiegazione</label> <progress id="audioProgress" max="100" style="width:100%" value="0"></progress><small id="audioClock">0:00 / 0:00</small></p><p><small>Il volume è personale: non modifica quello degli altri partecipanti.</small></p></div><p id="status">Pronto. Per entrare in VR è necessario HTTPS e un browser compatibile WebXR.</p></div>
 <a-scene background="color:#d9e6f2" renderer="colorManagement:true;antialias:true" xr-mode-ui="enabled:true">
 <!-- B01 v0.8: nuova scenografia 3D. Geometria reale, non semplice sfondo fotografico. -->
 <a-sky color="#a5c8e4"></a-sky>
@@ -55,7 +55,7 @@ META QUEST 3" width="1.95"></a-text>
 <!-- Pedana docente, sulla destra e fuori dallo schermo -->
 <a-cylinder color="#4a6583" height=".09" position="3.05 .045 -3.95" radius="1.08"></a-cylinder>
 <a-torus color="#33b9f6" position="3.05 .096 -3.95" radius="1.06" radius-tubular=".019" rotation="-90 0 0"></a-torus>
-<a-entity id="teacher" position="3.05 .10 -3.95" rotation="0 -90 0">
+<a-entity id="teacher" position="3.05 .10 -3.95" rotation="0 0 0">
 <!-- Avatar docente stilizzato: giacca, camicia, mani, volto e capelli. Orientato verso la lavagna. -->
 <a-cylinder color="#1c385b" height=".83" position="0 1.07 0" radius=".27"></a-cylinder>
 <a-box color="#f5f7fc" depth=".025" height=".62" position="0 1.11 .245" width=".17"></a-box>
@@ -64,7 +64,7 @@ META QUEST 3" width="1.95"></a-text>
 <a-box color="#493c32" depth=".42" height=".12" position="-.15 .055 .09" width=".23"></a-box><a-box color="#493c32" depth=".42" height=".12" position=".15 .055 .09" width=".23"></a-box>
 <a-cylinder color="#1c385b" height=".67" position="-.34 1.08 .02" radius=".09" rotation="0 0 -18"></a-cylinder>
 <a-sphere color="#dca783" position="-.45 .78 .05" radius=".105"></a-sphere>
-<a-cylinder color="#1c385b" height=".68" position=".38 1.17 .10" radius=".09" rotation="-28 0 52"></a-cylinder>
+<a-cylinder id="teacherGestureArm" color="#1c385b" height=".68" position=".38 1.17 .10" radius=".09" rotation="-28 0 52" animation__talk="property:rotation;from:-28 0 52;to:-15 0 37;dur:950;dir:alternate;loop:true;startEvents:teacher-talk;pauseEvents:teacher-silent"></a-cylinder>
 <a-sphere color="#dca783" position=".61 1.43 .20" radius=".105"></a-sphere>
 <a-cylinder color="#dca783" height=".18" position="0 1.58 0" radius=".09"></a-cylinder>
 <a-sphere color="#dca783" position="0 1.85 0" radius=".28" scale="1 1.13 .94"></a-sphere>
@@ -72,6 +72,33 @@ META QUEST 3" width="1.95"></a-text>
 <a-sphere color="#26384b" position="-.095 1.88 .25" radius=".018"></a-sphere><a-sphere color="#26384b" position=".095 1.88 .25" radius=".018"></a-sphere>
 <a-box color="#28364b" depth=".015" height=".012" position="0 1.875 .263" width=".28"></a-box>
 <a-box color="#693a40" depth=".015" height=".02" id="mouth" position="0 1.71 .263" width=".12"></a-box>
+<!-- v0.11: dettagli del volto, leggibili frontalmente in Quest 3 -->
+<a-sphere color="#dca783" position="-.285 1.84 0" radius=".064" scale=".45 1 .65"></a-sphere>
+<a-sphere color="#dca783" position=".285 1.84 0" radius=".064" scale=".45 1 .65"></a-sphere>
+<a-sphere color="#c88f6f" position="0 1.79 .272" radius=".046" scale=".65 1 .65"></a-sphere>
+<a-box color="#34323a" position="-.105 1.943 .263" width=".105" height=".018" depth=".018" rotation="0 0 -8"></a-box>
+<a-box color="#34323a" position=".105 1.943 .263" width=".105" height=".018" depth=".018" rotation="0 0 8"></a-box>
+<a-torus color="#253346" position="-.095 1.884 .267" radius=".065" radius-tubular=".008" segments-radial="6" segments-tubular="16"></a-torus>
+<a-torus color="#253346" position=".095 1.884 .267" radius=".065" radius-tubular=".008" segments-radial="6" segments-tubular="16"></a-torus>
+<a-box color="#253346" position="0 1.893 .272" width=".063" height=".012" depth=".012"></a-box>
+<a-box color="#6c5147" position="0 1.685 .26" width=".18" height=".035" depth=".018"></a-box>
+<!-- luce discreta: azzurra a riposo, verde mentre parla -->
+<a-sphere id="teacherSpeakingLight" color="#31b6f2" material="emissive:#168ec4;emissiveIntensity:.6" radius=".048" position="-.25 1.42 .22"></a-sphere>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </a-entity><a-text align="center" color="#17385c" position="3.05 2.57 -3.95" value="DOCENTE VIRTUALE" width="2.4"></a-text><a-entity id="others"></a-entity>
 <!-- v0.9: architettura e arredi visibili da Quest 3 -->
 <a-entity id="v09-architecture">
@@ -130,10 +157,10 @@ recordedAudio.addEventListener('timeupdate',updateProgress);recordedAudio.addEve
 $('localVolume').addEventListener('input',()=>{const v=Number($('localVolume').value);recordedAudio.volume=v/100;$('volumeValue').textContent=v+'%'});
 
 let audioUnlocked = false;
-recordedAudio.addEventListener('play',()=>{status('Audio preregistrato in riproduzione.');$('audioInfo').textContent='Audio slide '+(slide+1)+' in riproduzione';clearInterval(voiceTimer);voiceTimer=setInterval(()=>$('mouth').setAttribute('height',String(.02+Math.random()*.07)),130)});
-recordedAudio.addEventListener('ended',()=>{clearInterval(voiceTimer);$('mouth').setAttribute('height','.02');status('Spiegazione terminata.');$('audioInfo').textContent='Audio terminato'});
+recordedAudio.addEventListener('play',()=>{$('teacherGestureArm').emit('teacher-talk');$('teacherSpeakingLight').setAttribute('color','#38db91');status('Audio preregistrato in riproduzione.');$('audioInfo').textContent='Audio slide '+(slide+1)+' in riproduzione';clearInterval(voiceTimer);voiceTimer=setInterval(()=>$('mouth').setAttribute('height',String(.02+Math.random()*.07)),130)});
+recordedAudio.addEventListener('ended',()=>{$('teacherGestureArm').emit('teacher-silent');$('teacherSpeakingLight').setAttribute('color','#31b6f2');clearInterval(voiceTimer);$('mouth').setAttribute('height','.02');status('Spiegazione terminata.');$('audioInfo').textContent='Audio terminato'});
 recordedAudio.addEventListener('error',()=>{status('Audio non disponibile: verifica il file MP3 della slide '+(slide+1)+'.');$('audioInfo').textContent='Errore audio: '+recordedAudio.src;});
-function stopSpeech(){audioRequest++;clearInterval(voiceTimer);clearTimeout(timer);recordedAudio.pause();try{recordedAudio.currentTime=0}catch(e){}updateProgress();$('mouth').setAttribute('height','.02');currentPlaybackKey=null}
+function stopSpeech(){$('teacherGestureArm').emit('teacher-silent');$('teacherSpeakingLight').setAttribute('color','#31b6f2');audioRequest++;clearInterval(voiceTimer);clearTimeout(timer);recordedAudio.pause();try{recordedAudio.currentTime=0}catch(e){}updateProgress();$('mouth').setAttribute('height','.02');currentPlaybackKey=null}
 async function unlockAudio(){
   // Da eseguire durante un gesto reale dell'utente (clic/tap) prima dell'avvio in VR.
   try{recordedAudio.muted=true;recordedAudio.src='audio/b01_01.mp3';await recordedAudio.play();recordedAudio.pause();recordedAudio.currentTime=0;recordedAudio.muted=false;audioUnlocked=true;status('Audio pronto. Puoi entrare in VR.');}catch(e){recordedAudio.muted=false;status('Audio non sbloccato: premi Attiva audio prima di entrare in VR.');}
