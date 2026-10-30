@@ -2,31 +2,161 @@
   "id": "L03",
   "title": "Lezione 3 – Dall’esperienza immersiva alla lezione disciplinare",
   "slides": [
-    {"title":"Lezione 3 – Introduzione","board":"Dall’esperienza immersiva alla lezione disciplinare","image":"slides/l03_01.png","audio":""},
-    {"title":"Slide 02","board":"Lezione 3 – Slide 02","image":"slides/l03_02.png","audio":""},
-    {"title":"Slide 03","board":"Lezione 3 – Slide 03","image":"slides/l03_03.png","audio":""},
-    {"title":"Slide 04","board":"Lezione 3 – Slide 04","image":"slides/l03_04.png","audio":""},
-    {"title":"Slide 05","board":"Lezione 3 – Slide 05","image":"slides/l03_05.png","audio":""},
-    {"title":"Slide 06","board":"Lezione 3 – Slide 06","image":"slides/l03_06.png","audio":""},
-    {"title":"Slide 07","board":"Lezione 3 – Slide 07","image":"slides/l03_07.png","audio":""},
-    {"title":"Slide 08","board":"Lezione 3 – Slide 08","image":"slides/l03_08.png","audio":""},
-    {"title":"Slide 09","board":"Lezione 3 – Slide 09","image":"slides/l03_09.png","audio":""},
-    {"title":"Slide 10","board":"Lezione 3 – Slide 10","image":"slides/l03_10.png","audio":""},
-    {"title":"Slide 11","board":"Lezione 3 – Slide 11","image":"slides/l03_11.png","audio":""},
-    {"title":"Slide 12","board":"Lezione 3 – Slide 12","image":"slides/l03_12.png","audio":""},
-    {"title":"Slide 13","board":"Lezione 3 – Slide 13","image":"slides/l03_13.png","audio":""},
-    {"title":"Slide 14","board":"Lezione 3 – Slide 14","image":"slides/l03_14.png","audio":""},
-    {"title":"Slide 15","board":"Lezione 3 – Slide 15","image":"slides/l03_15.png","audio":""},
-    {"title":"Slide 16","board":"Lezione 3 – Slide 16","image":"slides/l03_16.png","audio":""},
-    {"title":"Slide 17","board":"Lezione 3 – Slide 17","image":"slides/l03_17.png","audio":""},
-    {"title":"Slide 18","board":"Lezione 3 – Slide 18","image":"slides/l03_18.png","audio":""},
-    {"title":"Slide 19","board":"Lezione 3 – Slide 19","image":"slides/l03_19.png","audio":""},
-    {"title":"Slide 20","board":"Lezione 3 – Slide 20","image":"slides/l03_20.png","audio":""},
-    {"title":"Slide 21","board":"Lezione 3 – Slide 21","image":"slides/l03_21.png","audio":""},
-    {"title":"Slide 22","board":"Lezione 3 – Slide 22","image":"slides/l03_22.png","audio":""},
-    {"title":"Slide 23","board":"Lezione 3 – Slide 23","image":"slides/l03_23.png","audio":""},
-    {"title":"Slide 24","board":"Lezione 3 – Slide 24","image":"slides/l03_24.png","audio":""},
-    {"title":"Slide 25","board":"Lezione 3 – Slide 25","image":"slides/l03_25.png","audio":""},
-    {"title":"Slide 26","board":"Lezione 3 – Conclusioni","image":"slides/l03_26.png","audio":""}
+    {
+      "title": "Lezione 3 – Introduzione",
+      "board": "Lezione 3 – Slide 01",
+      "image": "slides/l03_01.png",
+      "audio": "audio/l03_01.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 02",
+      "board": "Lezione 3 – Slide 02",
+      "image": "slides/l03_02.png",
+      "audio": "audio/l03_02.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 03",
+      "board": "Lezione 3 – Slide 03",
+      "image": "slides/l03_03.png",
+      "audio": "audio/l03_03.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 04",
+      "board": "Lezione 3 – Slide 04",
+      "image": "slides/l03_04.png",
+      "audio": "audio/l03_04.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 05",
+      "board": "Lezione 3 – Slide 05",
+      "image": "slides/l03_05.png",
+      "audio": "audio/l03_05.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 06",
+      "board": "Lezione 3 – Slide 06",
+      "image": "slides/l03_06.png",
+      "audio": "audio/l03_06.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 07",
+      "board": "Lezione 3 – Slide 07",
+      "image": "slides/l03_07.png",
+      "audio": "audio/l03_07.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 08",
+      "board": "Lezione 3 – Slide 08",
+      "image": "slides/l03_08.png",
+      "audio": "audio/l03_08.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 09",
+      "board": "Lezione 3 – Slide 09",
+      "image": "slides/l03_09.png",
+      "audio": "audio/l03_09.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 10",
+      "board": "Lezione 3 – Slide 10",
+      "image": "slides/l03_10.png",
+      "audio": "audio/l03_10.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 11",
+      "board": "Lezione 3 – Slide 11",
+      "image": "slides/l03_11.png",
+      "audio": "audio/l03_11.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 12",
+      "board": "Lezione 3 – Slide 12",
+      "image": "slides/l03_12.png",
+      "audio": "audio/l03_12.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 13",
+      "board": "Lezione 3 – Slide 13",
+      "image": "slides/l03_13.png",
+      "audio": "audio/l03_13.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 14",
+      "board": "Lezione 3 – Slide 14",
+      "image": "slides/l03_14.png",
+      "audio": "audio/l03_14.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 15",
+      "board": "Lezione 3 – Slide 15",
+      "image": "slides/l03_15.png",
+      "audio": "audio/l03_15.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 16",
+      "board": "Lezione 3 – Slide 16",
+      "image": "slides/l03_16.png",
+      "audio": "audio/l03_16.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 17",
+      "board": "Lezione 3 – Slide 17",
+      "image": "slides/l03_17.png",
+      "audio": "audio/l03_17.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 18",
+      "board": "Lezione 3 – Slide 18",
+      "image": "slides/l03_18.png",
+      "audio": "audio/l03_18.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 19",
+      "board": "Lezione 3 – Slide 19",
+      "image": "slides/l03_19.png",
+      "audio": "audio/l03_19.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 20",
+      "board": "Lezione 3 – Slide 20",
+      "image": "slides/l03_20.png",
+      "audio": "audio/l03_20.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 21",
+      "board": "Lezione 3 – Slide 21",
+      "image": "slides/l03_21.png",
+      "audio": "audio/l03_21.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 22",
+      "board": "Lezione 3 – Slide 22",
+      "image": "slides/l03_22.png",
+      "audio": "audio/l03_22.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 23",
+      "board": "Lezione 3 – Slide 23",
+      "image": "slides/l03_23.png",
+      "audio": "audio/l03_23.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 24",
+      "board": "Lezione 3 – Slide 24",
+      "image": "slides/l03_24.png",
+      "audio": "audio/l03_24.mp3"
+    },
+    {
+      "title": "Lezione 3 – Slide 25",
+      "board": "Lezione 3 – Slide 25",
+      "image": "slides/l03_25.png",
+      "audio": "audio/l03_25.mp3"
+    },
+    {
+      "title": "Lezione 3 – Conclusioni",
+      "board": "Lezione 3 – Slide 26",
+      "image": "slides/l03_26.png",
+      "audio": "audio/l03_26.mp3"
+    }
   ]
 }
