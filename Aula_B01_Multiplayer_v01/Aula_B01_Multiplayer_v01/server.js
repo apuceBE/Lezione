@@ -2,7 +2,7 @@ import { readFileSync } from 'fs';
 import express from 'express';
 import http from 'http';
 import { WebSocketServer, WebSocket } from 'ws';
-import { randomUUID } from 'crypto';
+import { randomUUID, createHash, timingSafeEqual } from 'crypto';
 
 const app = express();
 app.use(express.static('public'));
@@ -12,6 +12,20 @@ const wss = new WebSocketServer({ server, path: '/ws' });
 
 const rooms = new Map();
 const MAX = 20;
+const MAX_REGISTI = 2; // PC e Quest 3 del formatore
+const REGIA_CODE = process.env.REGIA_CODE;
+if (!REGIA_CODE || REGIA_CODE.length < 12) {
+  throw new Error('Imposta REGIA_CODE (almeno 12 caratteri) nelle variabili ambiente del server.');
+}
+function validRegiaCode(candidate) {
+  if (typeof candidate !== 'string') return false;
+  const a = createHash('sha256').update(candidate).digest();
+  const b = createHash('sha256').update(REGIA_CODE).digest();
+  return timingSafeEqual(a, b);
+}
+function isRegista(room, id) { return room.peers.get(id)?.regista === true; }
+function controllerId(room) { return [...room.peers.values()].find(p => p.regista)?.id || null; }
+
 
 // Lezione 3: numero di slide letto da L03.json
 const lesson = JSON.parse(
@@ -48,7 +62,7 @@ function state(room) {
     slide: room.slide,
     playing: room.playing,
     startedAt: room.startedAt,
-    hostId: room.hostId,
+    hostId: controllerId(room),
     peers: [...room.peers.values()].map(
       ({ id, name, x, z, rot }) => ({
         id, name, x, z, rot
@@ -110,19 +124,32 @@ wss.on('connection', ws => {
         return;
       }
 
-      const isHost = !room.hostId;
+      const wantsRegia = typeof m.regiaCode === 'string' && m.regiaCode.length > 0;
+      if (wantsRegia && !validRegiaCode(m.regiaCode)) {
+        send(ws, { type: 'error', message: 'Codice riservato al formatore non valido.' });
+        room = null;
+        return;
+      }
+      const activeRegisti = [...room.peers.values()].filter(p => p.regista).length;
+      if (wantsRegia && activeRegisti >= MAX_REGISTI) {
+        send(ws, { type: 'error', message: 'Sono già collegati i due dispositivi del formatore.' });
+        room = null;
+        return;
+      }
+      const isHost = wantsRegia;
       const seat = room.peers.size;
 
       room.peers.set(id, {
         id,
         ws,
         name,
+        regista: isHost,
         x: Math.sin(seat * 2.4) * 2.3,
         z: 1.5 + Math.floor(seat / 6) * 0.6,
         rot: 0
       });
 
-      if (isHost) room.hostId = id;
+      room.hostId = controllerId(room);
 
       send(ws, {
         type: 'welcome',
@@ -173,7 +200,7 @@ wss.on('connection', ws => {
       }, ws);
     }
 
-    if (m.type === 'slide' && id === room.hostId) {
+    if (m.type === 'slide' && isRegista(room, id)) {
       room.slide = Math.max(
         0,
         Math.min(
@@ -196,7 +223,7 @@ wss.on('connection', ws => {
       send(ws, update);
     }
 
-    if (m.type === 'play' && id === room.hostId) {
+    if (m.type === 'play' && isRegista(room, id)) {
       room.playing = !!m.playing;
       room.startedAt = room.playing
         ? Date.now() + 1200
@@ -219,8 +246,8 @@ wss.on('connection', ws => {
 
     room.peers.delete(id);
 
-    if (room.hostId === id) {
-      room.hostId = room.peers.keys().next().value || null;
+    room.hostId = controllerId(room);
+    if (!room.hostId) {
       room.playing = false;
       room.startedAt = 0;
     }
